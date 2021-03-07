@@ -1,0 +1,21 @@
+Queue
+
+
+Its a FIFO (first in first out) - open on both ends
+Its an abbstract data structure - you cn implement a queue
+We deal with one posittion of memory - 
+
+Basic ops
+
+
+Enque =  Allows us to add objets in the queue -  we add the, from the rear
+Deque = Allows us to remove and return an object from the front of the queue
+Peek = Allows us to get the element from the front of the queue
+isFull = Checks if the queue is isFull (one of the helper methods)
+isEmpty = check if the queue is Empty (another one of the helper methods)
+
+Rear = returns the object at the end of the queue
+
+
+Implementation
+
