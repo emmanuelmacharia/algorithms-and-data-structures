@@ -143,6 +143,12 @@ lList.append('C')
 lList.append("D")
 lList.prepend('E')
 
+x = ['G', 'H']
+
+for i in x:
+    lList.append(i)
+
+
 lList.insert_in_between(lList.headval.next.next, 'F')
 
 lList.print_list()
