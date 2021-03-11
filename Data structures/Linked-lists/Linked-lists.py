@@ -133,6 +133,46 @@ class LinkedList:
         prev_node.next = new_node
         
 
+    def delete_node(self, data):
+        '''deletes a node from the linked list'''
+        current_node = self.headval
+        if current_node and current_node.data == data:
+            self.headval = current_node.next
+            current_node = None
+            return
+        prev_node = None
+        while current_node and current_node.data != data:
+            prev_node = current_node
+            current_node = current_node.next
+        
+        if not current_node:
+            return
+        
+        prev_node.next = current_node.next
+        current_node = None
+
+    def delete_node_at_pos(self, index):
+        ''' deletes a node at a particular position '''
+        current_node = self.headval
+        if index == 0:
+            self.headval = current_node.next
+            current_node = None
+
+        prev_node  = None
+        count = 1
+        while current_node and count != index:
+            prev_node = current_node
+            current_node = current_node.next
+            count += 1
+
+        if not current_node:
+            return
+
+        prev_node.next = current_node.next
+        current_node = None
+
+
+            
 
 
 
@@ -148,6 +188,7 @@ x = ['G', 'H']
 for i in x:
     lList.append(i)
 
+lList.delete_node('G')
 
 lList.insert_in_between(lList.headval.next.next, 'F')
 
