@@ -192,4 +192,19 @@ lList.delete_node('G')
 
 lList.insert_in_between(lList.headval.next.next, 'F')
 
-lList.print_list()
+
+
+def reverse(l_list):
+    new_list = LinkedList()
+    head_val = l_list.headval
+    while head_val.next:
+        new_list.prepend(head_val)
+        head_val = head_val.next
+    return new_list
+    
+my_list  = lList
+
+reversed = reverse(my_list)
+
+print(type(reversed))
+reversed.print_list()
